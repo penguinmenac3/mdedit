@@ -1,0 +1,3 @@
+[submodule "src/mdedit"]
+	path = src/mdedit
+	url = git@github.com:penguinmenac3/mdedit-lib.git
