@@ -36,3 +36,15 @@ const config = {
 
 export default config
 ```
+
+## Build the app for release
+
+Run the build command, add and commit the dist folder and then push this folger to gh-pages.
+```bash
+npm run build
+rm dist/favicon.xcf
+git add -f dist
+git commit -m "Build gh-pages."
+git push
+git subtree push --prefix dist origin gh-pages
+```
