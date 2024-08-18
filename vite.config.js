@@ -3,6 +3,7 @@
  */
 const config = {
     // ...
+    base: "/mdedit/",
     server: {
         watch: {
             ignored: ['!**/dist/'],
