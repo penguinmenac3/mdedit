@@ -16,26 +16,33 @@ We opted to not distribute the code as a full node library, so that it is compat
 4. Add your changes.
 5. Submit a pull request.
 
-### Windows
+### Git support in container
 
-On windows you have to create a `vite.config.js` file with the following content, so that the automatic reloading when you change the code works.
+To support git in the container, you must have a ssh-agent setup to share your keys with the container.
 
-```js
-/**
- * @type {import('vite').UserConfig}
- */
-const config = {
-    // ...
-    server: {
-        watch: {
-            ignored: ['!**/dist/'],
-            usePolling: true
-        }
-    }
-}
-
-export default config
+```bash
+ssh-add $HOME/.ssh/<your private key>
 ```
+
+On windows there are usually some additional steps required.
+You have to update your ssh if it is outdated.
+And add ssh-agent to your services so it runs in the background.
+After you did that the ssh-add commant should have no errors and your container should see the keys.
+
+```powershell
+# Check SSH version
+ssh -V  # if >=8.9 you are fine, otherwise install beta
+
+# Install the beta openssh (until)
+winget install "OpenSSH Beta"
+
+# If ssh-add errors, run this in an ADMIN powershell
+Set-Service ssh-agent -StartupType Automatic
+Start-Service ssh-agent
+Get-Service ssh-agent
+```
+
+I would recommend a reboot after the setup to make sure the new versions are used.
 
 ## Build the app for release
 

@@ -1,6 +1,6 @@
 FROM node:20-alpine
 
-RUN apk update && apk upgrade && apk add git
+RUN apk update && apk upgrade && apk add git openssh
 
 WORKDIR /workspaces/simplemd
 
