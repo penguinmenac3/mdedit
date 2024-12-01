@@ -19,6 +19,8 @@ echo "Hello World"
 echo "I dunno what to write here"
 ```
 
+This is a list:
+
 * An unordered list
 * Items
     * subitems
@@ -33,6 +35,21 @@ echo "I dunno what to write here"
         b. Bar
     3. More stuff
 * Wow, done!
+
+## Usage
+
+1. Install numpy
+   ```bash
+   pip install numpy
+   ```
+2. Install foobar
+   ```bash
+   pip install foobar
+   ```
+* Then Run script
+   ```bash
+   python script.py
+   ```
 
 ## Another section
 
