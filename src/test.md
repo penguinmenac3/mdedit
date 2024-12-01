@@ -85,7 +85,7 @@ TODO
 
 Here is an image linked.
 
-TODO
+![Penguin image](https://avatars.githubusercontent.com/u/4391367?v=4)
 
 ## Videos
 
